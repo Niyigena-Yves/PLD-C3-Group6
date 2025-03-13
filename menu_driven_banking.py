@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import json
 
 # File to store user data
@@ -56,8 +58,14 @@ def withdraw():
     accounts[acc_no]["balance"] -= amount
     accounts[acc_no]["transactions"].append(f"Withdrew: ${amount}")
     save_data(accounts)
-    print("Withdrawal successful!")   
-
-# Run the banking system
-if __name__ == "__main__":
-    main()
+    print("Withdrawal successful!")
+    
+    # Function to display transaction history
+def transaction_history():
+    acc_no = input("Enter account number: ")
+    if acc_no not in accounts:
+        print("Account not found!")
+        return
+    print("Transaction History:")
+    for transaction in accounts[acc_no]["transactions"]:
+        print("-", transaction)
