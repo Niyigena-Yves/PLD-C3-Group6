@@ -56,7 +56,16 @@ def withdraw():
     accounts[acc_no]["balance"] -= amount
     accounts[acc_no]["transactions"].append(f"Withdrew: ${amount}")
     save_data(accounts)
-    print("Withdrawal successful!")   
+
+print("Withdrawal successful!")
+
+#Function to check balance
+def check_balance():
+    acc_no = input("Enter account number: ")
+    if acc_no not in accounts:
+        print("Account not found!")
+        return
+    print(f"Account Balance: ${accounts[acc_no]['balance']}")
 
 # Run the banking system
 if __name__ == "__main__":
