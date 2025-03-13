@@ -31,7 +31,17 @@ def create_account():
     save_data(accounts)
     print("Account created successfully!")
 
-
+# Function to deposit money
+def deposit():
+    acc_no = input("Enter account number: ")
+    if acc_no not in accounts:
+        print("Account not found!")
+        return
+    amount = float(input("Enter deposit amount: "))
+    accounts[acc_no]["balance"] += amount
+    accounts[acc_no]["transactions"].append(f"Deposited: ${amount}")
+    save_data(accounts)
+    print("Deposit successful!")
 
 # Run the banking system
 if __name__ == "__main__":
