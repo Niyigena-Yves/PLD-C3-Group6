@@ -43,6 +43,21 @@ def deposit():
     save_data(accounts)
     print("Deposit successful!")
 
+ # Function to withdraw money
+def withdraw():
+    acc_no = input("Enter account number: ")
+    if acc_no not in accounts:
+        print("Account not found!")
+        return
+    amount = float(input("Enter withdrawal amount: "))
+    if amount > accounts[acc_no]["balance"]:
+        print("Insufficient balance!")
+        return
+    accounts[acc_no]["balance"] -= amount
+    accounts[acc_no]["transactions"].append(f"Withdrew: ${amount}")
+    save_data(accounts)
+    print("Withdrawal successful!")   
+
 # Run the banking system
 if __name__ == "__main__":
     main()
