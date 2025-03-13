@@ -81,7 +81,12 @@ def check_balance():
 =======
     print(f"Account Balance: ${accounts[acc_no]['balance']}")
 
-# Run the banking system
-if __name__ == "__main__":
-    main()
->>>>>>> 5527c7dabd8a66131eb786526ee83f571307ab14
+# Function to display transaction history
+def transaction_history():
+    acc_no = input("Enter account number: ")
+    if acc_no not in accounts:
+        print("Account not found!")
+        return
+    print("Transaction History:")
+    for transaction in accounts[acc_no]["transactions"]:
+        print("-", transaction)
