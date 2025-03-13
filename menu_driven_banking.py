@@ -34,7 +34,6 @@ def create_account():
     print("Account created successfully!")
 
 # Function to deposit money 
-
 def deposit():
     acc_no = input("Enter account number: ")
     if acc_no not in accounts:
