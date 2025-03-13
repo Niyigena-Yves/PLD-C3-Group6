@@ -58,27 +58,18 @@ def withdraw():
     accounts[acc_no]["balance"] -= amount
     accounts[acc_no]["transactions"].append(f"Withdrew: ${amount}")
     save_data(accounts)
-<<<<<<< HEAD
-    print("Withdrawal successful!")
-    
-    # Function to display transaction history
-def transaction_history():
-=======
 
 print("Withdrawal successful!")
 
 #Function to check balance
 def check_balance():
->>>>>>> 5527c7dabd8a66131eb786526ee83f571307ab14
     acc_no = input("Enter account number: ")
     if acc_no not in accounts:
         print("Account not found!")
         return
-<<<<<<< HEAD
     print("Transaction History:")
     for transaction in accounts[acc_no]["transactions"]:
         print("-", transaction)
-=======
     print(f"Account Balance: ${accounts[acc_no]['balance']}")
 
 # Function to display transaction history
