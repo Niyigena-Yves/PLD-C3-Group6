@@ -76,6 +76,35 @@ def transaction_history():
     for transaction in accounts[acc_no]["transactions"]:
         print("-", transaction)
 
+# Main menu function
+def main():
+    while True:
+        print("\n=== BANKING SYSTEM MENU ===")
+        print("1. Create Account")
+        print("2. Deposit Money")
+        print("3. Withdraw Money")
+        print("4. Check Balance")
+        print("5. Transaction History")
+        print("6. Exit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            create_account()
+        elif choice == "2":
+            deposit()
+        elif choice == "3":
+            withdraw()
+        elif choice == "4":
+            check_balance()
+        elif choice == "5":
+            transaction_history()
+        elif choice == "6":
+            print("Exiting system. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again!")
+
 # Run the banking system
 if _name_ == "_main_":
     main()
