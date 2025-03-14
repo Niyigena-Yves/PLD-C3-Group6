@@ -31,8 +31,6 @@ def create_account():
     save_data(accounts)
     print("Account created successfully!")
 
-
-
 # Run the banking system
 if __name__ == "__main__":
     main()

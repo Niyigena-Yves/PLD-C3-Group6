@@ -7,5 +7,14 @@
             "Deposited: $500.0",
             "Withdrew: $200.0"
         ]
+    },
+    "223456789": {
+        "name": "Yves N",
+        "balance": 13000.0,
+        "transactions": [
+            "Initial deposit: $10000.0",
+            "Deposited: $5000.0",
+            "Withdrew: $2000.0"
+        ]
     }
 }
